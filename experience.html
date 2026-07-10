@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education — Lekshmi</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Syne", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+              ink: "#0A0A0F",
+              slate: "#1C1C2E",
+              muted: "#6B7280",
+              accent: "#5B6BF8",
+              "accent-light": "#818CF8",
+              glow: "#E8EAFF",
+              surface: "#F4F5FF",
+            },
+            animation: {
+              "fade-up": "fadeUp 0.7s ease both",
+              "fade-in": "fadeIn 0.6s ease both",
+              float: "float 6s ease-in-out infinite",
+              pulse2: "pulse2 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: 0, transform: "translateY(30px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-12px)" },
+              },
+              pulse2: {
+                "0%, 100%": { opacity: 0.4, transform: "scale(1)" },
+                "50%": { opacity: 0.7, transform: "scale(1.08)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .tab-btn.active {
+        background: #5b6bf8;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(91, 107, 248, 0.25);
+      }
+
+      .timeline-dot {
+        animation: dotPulse 2.5s ease-in-out infinite;
+      }
+      @keyframes dotPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(91, 107, 248, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 8px rgba(91, 107, 248, 0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="font-display font-bold text-xl text-accent tracking-tight"
+        >
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="w-10 h-10 bg-black rounded-md"
+          />
+        </a>
+
+        <ul
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70"
+        >
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="experience.html"
+              class="nav-active hover:text-accent transition-colors"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" class="hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="contact.html"
+          class="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent/30"
+        >
+          <i class="bi bi-send-fill text-xs"></i> Contact Me
+        </a>
+
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col gap-1.5 p-2 group"
+          aria-label="Menu"
+        >
+          <span
+            class="w-6 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+          <span
+            class="w-4 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden px-6 pb-4">
+        <ul
+          class="flex flex-col gap-4 text-sm font-medium text-ink/70 border-t border-ink/10 pt-4"
+        >
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="experience.html" class="text-accent font-semibold"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" class="hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-accent transition-colors"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal text-center mb-12">
+          <p
+            class="text-xs font-semibold text-accent uppercase tracking-widest mb-2"
+          >
+            My Journey
+          </p>
+          <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-ink">
+              <span class="gradient-text">Education</span>
+          </h2>
+        </div>
+
+        
+
+     
+        <div  >
+          <div class="relative max-w-2xl mx-auto">
+            <div class="absolute left-6 top-0 bottom-0 w-px bg-accent/15"></div>
+
+            <div class="relative pl-16 pb-12">
+              <div
+                class="timeline-dot absolute left-4 top-1 w-4 h-4 bg-accent rounded-full border-2 border-white shadow-sm"
+              ></div>
+              <div
+                class="bg-white rounded-3xl p-6 shadow-sm border border-white/80 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              >
+                <span
+                  class="text-xs font-semibold text-accent bg-accent/10 rounded-full px-3 py-1"
+                  >2020– 2023
+                >
+                <h4 class="font-display font-bold text-ink text-lg mt-3 mb-1">
+                  BA Economics
+                </h4>
+                <p class="text-accent text-sm font-medium mb-3">
+                  Kerala University
+                </p>
+                <p class="text-muted text-sm leading-relaxed">
+                  Completed graduation in Economics
+                </p>
+              </div>
+            </div>
+
+            <div class="relative pl-16 pb-12">
+              <div
+                class="timeline-dot absolute left-4 top-1 w-4 h-4 bg-accent/40 rounded-full border-2 border-white shadow-sm"
+              ></div>
+              <div
+                class="bg-white rounded-3xl p-6 shadow-sm border border-white/80 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              >
+                <span
+                  class="text-xs font-semibold text-muted bg-ink/5 rounded-full px-3 py-1"
+                  >2018- 2020
+                >
+                <h4 class="font-display font-bold text-ink text-lg mt-3 mb-1">
+                  Higher Secondary Education
+                </h4>
+                <p class="text-accent text-sm font-medium mb-3">
+                  Kerala, India
+                </p>
+                <p class="text-muted text-sm leading-relaxed">
+                  Completed higher secondary schooling with a focus on Biology
+                  science.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-ink text-white/60 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <span class="font-display font-bold text-white text-lg">Lekshmi</span>
+        <p class="text-sm">© 2026 Lekshmi Portfolio · All Rights Reserved</p>
+        <div class="flex gap-4">
+          <a
+            href="https://github.com/Lekshmi-steyp"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/Lekshmi-thaj-757581397/"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=Lekshmitpm5@gmail.com"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.tab;
+
+          tabBtns.forEach((b) => {
+            b.classList.remove("active");
+            b.classList.add("text-muted");
+            b.classList.remove("text-white");
+          });
+          btn.classList.add("active");
+          btn.classList.remove("text-muted");
+
+          tabContents.forEach((content) => {
+            content.classList.add("hidden");
+          });
+          const activeContent = document.getElementById("tab-" + target);
+          activeContent.classList.remove("hidden");
+
+          setTimeout(() => {}, 50);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service — Lekshmi</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Syne", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+              ink: "#0A0A0F",
+              slate: "#1C1C2E",
+              muted: "#6B7280",
+              accent: "#5B6BF8",
+              "accent-light": "#818CF8",
+              glow: "#E8EAFF",
+              surface: "#F4F5FF",
+            },
+            animation: {
+              "fade-up": "fadeUp 0.7s ease both",
+              "fade-in": "fadeIn 0.6s ease both",
+              float: "float 6s ease-in-out infinite",
+              pulse2: "pulse2 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: 0, transform: "translateY(30px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-12px)" },
+              },
+              pulse2: {
+                "0%, 100%": { opacity: 0.4, transform: "scale(1)" },
+                "50%": { opacity: 0.7, transform: "scale(1.08)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="font-display font-bold text-xl text-accent tracking-tight"
+        >
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="w-10 h-10 bg-black rounded-md"
+          />
+        </a>
+
+        <ul
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70"
+        >
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="experience.html"
+              class="hover:text-accent transition-colors"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              href="projects.html"
+              class="nav-active hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="contact.html"
+          class="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent/30"
+        >
+          <i class="bi bi-send-fill text-xs"></i> Contact Me
+        </a>
+
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col gap-1.5 p-2 group"
+          aria-label="Menu"
+        >
+          <span
+            class="w-6 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+          <span
+            class="w-4 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden px-6 pb-4">
+        <ul
+          class="flex flex-col gap-4 text-sm font-medium text-ink/70 border-t border-ink/10 pt-4"
+        >
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="experience.html"
+              class="hover:text-accent transition-colors"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" class="text-accent font-semibold"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-accent transition-colors"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="py-24 bg-surface border-t border-ink/5">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14 reveal">
+          <p
+            class="text-xs font-semibold text-accent uppercase tracking-widest mb-3"
+          >
+            My Work
+          </p>
+
+          <h2
+            class="font-display text-4xl sm:text-5xl font-extrabold text-ink mb-5"
+          >
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+
+          <p class="text-muted text-lg max-w-2xl mx-auto">
+            A collection of projects showcasing my frontend development skills.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-3xl p-7 border border-ink/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-2xl mb-5"
+            >
+              <i class="bi bi-code-slash"></i>
+            </div>
+
+            <h3 class="font-display text-2xl font-bold text-ink mb-3">
+              W3 Schools
+            </h3>
+
+            <p class="text-muted leading-relaxed mb-6">
+              Online learning platform offering tutorials, coding examples, and
+              beginner-friendly resources for modern web development
+              technologies and programming concepts.
+            </p>
+
+            <div class="flex gap-3 flex-wrap">
+              <a
+                href="https://github.com/lekshmi-prasadd/w3school-clone.git"
+                target="_blank"
+                class="px-5 py-2.5 rounded-full border border-accent text-accent font-medium hover:bg-accent hover:text-white transition-all duration-300"
+              >
+                <i class="bi bi-github me-1"></i> Source Code
+              </a>
+
+              <a
+                href="https://lekshmi-prasadd.github.io/w3school-clone/"
+                target="_blank"
+                class="px-5 py-2.5 rounded-full bg-accent text-white font-medium hover:bg-accent-light transition-all duration-300"
+              >
+                <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl p-7 border border-ink/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-2xl mb-5"
+            >
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+
+            <h3 class="font-display text-2xl font-bold text-ink mb-3">
+              Classmate
+            </h3>
+
+            <p class="text-muted leading-relaxed mb-6">
+             A modern frontend implementation inspired by the Classmate Shop website, built with HTML, CSS, and Bootstrap. 
+             Designed to deliver a visually appealing interface structured navigation, product showcase sections, and a seamless browsing experience.
+
+            </p>
+
+            <div class="flex gap-3 flex-wrap">
+              <a
+                href="https://github.com/lekshmi-prasadd/classmate-clone.git"
+                target="_blank"
+                class="px-5 py-2.5 rounded-full border border-accent text-accent font-medium hover:bg-accent hover:text-white transition-all duration-300"
+              >
+                <i class="bi bi-github me-1"></i> Source Code
+              </a>
+
+              <a
+                href="https://lekshmi-prasadd.github.io/classmate-clone/"
+                target="_blank"
+                class="px-5 py-2.5 rounded-full bg-accent text-white font-medium hover:bg-accent-light transition-all duration-300"
+              >
+                <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl p-7 border border-ink/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-2xl mb-5"
+            >
+              <i class="bi bi-globe2"></i>
+            </div>
+
+            <h3 class="font-display text-2xl font-bold text-ink mb-3">
+              Hira ornaments
+            </h3>
+
+            <p class="text-muted leading-relaxed mb-6">
+              A responsive jewelry website developed using HTML, CSS, Bootstrap, and JavaScript, featuring modern layouts, product showcases, smooth navigation, and a visually appealing user experience.
+            </p>
+
+            <div class="flex gap-3 flex-wrap">
+              <a
+                href="https://github.com/lekshmi-prasadd/hira.git"
+                target="_blank"
+                class="px-5 py-2.5 rounded-full border border-accent text-accent font-medium hover:bg-accent hover:text-white transition-all duration-300"
+              >
+                <i class="bi bi-github me-1"></i> Source Code
+              </a>
+
+              <a
+                href=" https://lekshmi-prasadd.github.io/hira/"
+                target="_blank"
+                class="px-5 py-2.5 rounded-full bg-accent text-white font-medium hover:bg-accent-light transition-all duration-300"
+              >
+                <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-white border-t border-ink/5"
+      style="height: 100vh; display: flex; align-items: center"
+    >
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <div class="reveal">
+          <p
+            class="text-xs font-semibold text-accent uppercase tracking-widest mb-3"
+          >
+            Let's Work Together
+          </p>
+          <h2
+            class="font-display text-4xl sm:text-5xl font-extrabold text-ink mb-5"
+          >
+            Have a project<br />
+            in <span class="gradient-text">mind?</span>
+          </h2>
+          <p class="text-muted text-lg mb-8">
+            I'm currently available for freelance work. Let's build something
+            amazing together.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1"
+          >
+            <i class="bi bi-send-fill text-sm"></i> Start a Conversation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-ink text-white/60 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <span class="font-display font-bold text-white text-lg">Lekshmi</span>
+        <p class="text-sm">© 2026 Lekshmi Portfolio · All Rights Reserved</p>
+        <div class="flex gap-4">
+          <a
+            href="https://github.com/Lekshmi-steyp"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/Lekshmi-thaj-757581397/"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=Lekshmitpm5@gmail.com"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

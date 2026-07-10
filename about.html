@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Lekshmi</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Syne", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+              ink: "#0A0A0F",
+              slate: "#1C1C2E",
+              muted: "#6B7280",
+              accent: "#5B6BF8",
+              "accent-light": "#818CF8",
+              glow: "#E8EAFF",
+              surface: "#F4F5FF",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-12px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .avatar-ring {
+        background: conic-gradient(#5b6bf8, #818cf8, #a5b4fc, #5b6bf8);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="font-display font-bold text-xl text-accent tracking-tight"
+        >
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="w-10 h-10 bg-black rounded-md"
+          />
+        </a>
+
+        <ul
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70"
+        >
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-active hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="experience.html"
+              class="hover:text-accent transition-colors"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" class="hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="contact.html"
+          class="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent/30"
+        >
+          <i class="bi bi-send-fill text-xs"></i> Contact Me
+        </a>
+
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col gap-1.5 p-2 group"
+          aria-label="Menu"
+        >
+          <span
+            class="w-6 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+          <span
+            class="w-4 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-ink rounded-full transition-all group-hover:bg-accent"
+          ></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden px-6 pb-4">
+        <ul
+          class="flex flex-col gap-4 text-sm font-medium text-ink/70 border-t border-ink/10 pt-4"
+        >
+          <li>
+            <a href="index.html" class="hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="text-accent font-semibold">About</a>
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="experience.html"
+              class="hover:text-accent transition-colors"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" class="hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-accent transition-colors"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-28 pb-16">
+      <div
+        class="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-0 lg:gap-16 items-center">
+          <div>
+            <div
+              class="w-max bg-white border border-accent/20 rounded-full px-4 py-1.5 text-xs font-semibold text-accent mb-6 shadow-sm"
+            >
+              <i class="bi bi-person-fill mr-1.5"></i> About Me
+            </div>
+
+            <h1
+              class="font-display text-4xl md:text-5xl sm:text-6xl font-extrabold leading-[1.08] text-ink mb-6"
+            >
+              Passionate<br />
+              <span class="gradient-text">Developer &</span><br />
+              Designer
+            </h1>
+
+            <p class="text-muted text-lg leading-relaxed max-w-md mb-6">
+              I'm <strong class="text-ink font-semibold">Lekshmi</strong>, a
+              frontend developer based in Kerala, India. I craft clean,
+              performant, and visually compelling web experiences that leave a
+              lasting impression.
+            </p>
+
+            <p class="text-muted text-base leading-relaxed max-w-md mb-8">
+              With a sharp eye for design and a love for clean code, I bridge
+              the gap between beautiful visuals and solid technical execution.
+              Every pixel matters to me.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center gap-6">
+            <div class="hidden lg:block relative">
+              <div
+                class="avatar-ring w-56 h-56 sm:w-64 sm:h-64 rounded-full p-1"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-surface flex items-center justify-center overflow-hidden border-4 border-white"
+                >
+                  <img
+                    src="images/Lekshmi.png"
+                    alt="Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="absolute -bottom-3 -right-3 bg-white rounded-2xl px-3 py-2 shadow-lg border border-ink/5 flex items-center gap-2"
+              >
+                <span
+                  class="w-2.5 h-2.5 bg-green-400 rounded-full animate-ping"
+                ></span>
+                <span class="text-xs font-semibold text-ink">Open to work</span>
+              </div>
+            </div>
+
+            <div
+              class="w-full bg-white rounded-3xl p-6 shadow-sm border border-white/80"
+            >
+              <h3 class="font-display font-bold text-ink text-base mb-4">
+                Quick Info
+              </h3>
+              <ul class="space-y-3 text-sm">
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center text-accent shrink-0"
+                    ><i class="bi bi-geo-alt-fill"></i
+                  ></span>
+                  <span class="text-muted">Kerala, India</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center text-accent shrink-0"
+                    ><i class="bi bi-translate"></i
+                  ></span>
+                  <span class="text-muted">English, Malayalam</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center text-accent shrink-0"
+                    ><i class="bi bi-mortarboard-fill"></i
+                  ></span>
+                  <span class="text-muted">Frontend Developer</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center text-accent shrink-0"
+                    ><i class="bi bi-heart-fill"></i
+                  ></span>
+                  <span class="text-muted">UI Design, Clean Code</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-ink text-white/60 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <span class="font-display font-bold text-white text-lg">Lekshmi</span>
+        <p class="text-sm">© 2026 Lekshmi Portfolio · All Rights Reserved</p>
+        <div class="flex gap-4">
+          <a
+            href="https://github.com/Lekshmi-steyp"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/Lekshmi-thaj-757581397/"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=Lekshmitpm5@gmail.com"
+            target="_blank"
+            class="w-9 h-9 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center text-sm transition-colors duration-300"
+          >
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
